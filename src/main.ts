@@ -71,7 +71,7 @@ rooms.forEach(room => {
     // X-axis
     svgTemp.append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
-        .call(d3.axisBottom(xTemp).ticks(6).tickFormat(d3.timeFormat("%H:%M")));
+        .call(d3.axisBottom<Date>(xTemp).ticks(6).tickFormat(d3.timeFormat("%H:%M")));
 
     // Y-axis
     svgTemp.append("g")
